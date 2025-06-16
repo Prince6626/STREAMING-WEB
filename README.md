@@ -18,8 +18,8 @@ A basic video streaming web app inspired by YouTube, built using **React.js**, *
 
 - ⚛️ React.js
 - 🎨 Tailwind CSS
-- 🔁 Redux (if you're using it)
+- 🔁 Redux
 - 📦 React Icons
-- 📡 YouTube API (optional if you're fetching real data)
+- 📡 YouTube API
 
 ---
