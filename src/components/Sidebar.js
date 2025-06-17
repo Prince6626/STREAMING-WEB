@@ -33,7 +33,7 @@ const Sidebar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="shadow-lg    p-5">
+    <div className="shadow-lg    p-5 ">
       <div className="flex flex-col ">
         <Link to={"/"}>
           <div className="flex m-2  cursor-pointer bg-gray-100 rounded-lg px-2 py-1 hover:bg-gray-200 ">

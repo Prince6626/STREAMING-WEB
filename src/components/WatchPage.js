@@ -14,31 +14,35 @@ const WatchPage = () => {
         dispatch(closeMenu());
     }, []);
 
-    return(
+    return (
         <div className="flex flex-col w-full">
-            <div className="px-2 flex w-full">
-                <div className="p-3">
-                    <iframe
-                        className="rounded-lg"
-                        width="950"
-                        height="525"
-                        src={"https://www.youtube.com/embed/" + searchParams.get("v")}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                    ></iframe>
+            {/* Top section: Video + LiveChat */}
+            <div className="flex flex-col lg:flex-row w-full px-2">
+                {/* Video Player */}
+                <div className="w-full lg:w-[70%] p-2">
+                <iframe
+                    className="w-full aspect-video rounded-lg"
+                    src={"https://www.youtube.com/embed/" + searchParams.get("v")}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                ></iframe>
                 </div>
-                <div w-full>
-                    <LiveChat/>
+
+                {/* Live Chat */}
+                <div className="w-full lg:w-[400px] p-2">
+                <LiveChat />
                 </div>
             </div>
-            <div>
+
+            {/* Comments */}
+            <div className="px-2">
                 <CommentContainer />
             </div>
         </div>
-    );
+  );
 };
 
 export default WatchPage;

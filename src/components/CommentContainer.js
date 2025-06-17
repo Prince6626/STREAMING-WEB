@@ -77,15 +77,15 @@ const Comment = ({data}) => {
 
     const {name, text, replies} = data;
     return(
-        <div className="flex items-start gap-4 shadow-md bg-white p-4 rounded-xl my-4 w-full max-w-2xl transition hover:shadow-lg" ps>
+        <div className="flex items-start gap-4 bg-white p-4 rounded-xl my-4 w-full max-w-2xl shadow-md transition hover:shadow-lg" ps>
             <img
-                className="w-12 h-12 rounded-full border-2 border-gray-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-300"
                 alt="user"
                 src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
             />
-            <div className="px-3">
-                <p className="font-semibold text-gray-800">{name}</p>
-                <p className="text-gray-600">{text}</p>
+            <div className="px-2 sm:px-3">
+                <p className="font-semibold text-gray-800 text-sm sm:text-base">{name}</p>
+                <p className="text-gray-600 text-sm sm:text-base">{text}</p>
             </div>
         </div>
     );
@@ -95,7 +95,7 @@ const CommentsList = ({ comments }) => {
   return comments.map((comment, index) => (
     <div key={index} >
         <Comment data={comment} />
-        <div className="pl-6 ml-4 border-l-2 border-gray-300">
+        <div className="pl-4 sm:pl-6 ml-2 sm:ml-4 border-l-2 border-gray-300">
             <CommentsList comments={comment.replies} />
         </div>
     </div>
@@ -105,8 +105,8 @@ const CommentsList = ({ comments }) => {
 
 const CommentContainer = () => {
     return(
-        <div className="m-8 p-6 bg-gray-50 rounded-xl shadow-inner">
-            <h1 className="text-3xl font-bold mb-6 text-gray-800">Comments:</h1>
+        <div className="mx-2 sm:mx-8 my-4 sm:my-8 px-4 py-6 bg-gray-50 rounded-xl shadow-inner">
+            <h1 cclassName="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-800">Comments:</h1>
             <CommentsList comments={commentsData} />
         </div>
     )

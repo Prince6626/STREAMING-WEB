@@ -1,7 +1,7 @@
 const Button = ({name}) => {
     return (
-        <div className="m-2 ">
-        <button className="cursor-pointer text-[14px] bg-gray-200 border py-1 px-3 font-bold rounded-lg outline-0">
+        <div className="flex-shrink-0">
+        <button className="whitespace-nowrap text-sm font-medium bg-gray-100 hover:bg-gray-200 px-4 py-1.5 rounded-full border border-gray-300 transition">
             {name}
         </button>
         </div>

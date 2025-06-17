@@ -17,8 +17,8 @@ const VideoContainer = () => {
     };
 
     return(
-        <div className="p-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="px-2 sm:px-4 py-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                 {videos.map((video) => (
                     <Link key={video?.id} to={"/watch?v="+video.id}>
                         <VideoCard info={video} />
